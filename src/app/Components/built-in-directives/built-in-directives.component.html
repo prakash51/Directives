@@ -1,0 +1,39 @@
+<h1>Built-in-directives Examples</h1>
+
+<div [ngClass]="addStyle?'content contentcard':''">
+    <span>This Element is style by ngclass</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae veritatis unde incidunt facilis enim architecto, consequuntur, doloremque numquam, voluptatem obcaecati hic! Fugit labore quidem est dolorum in nisi recusandae sed!
+</div>
+
+<div [ngClass]="styleObject">
+    <span>This Element is style by ngclass object</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae veritatis unde incidunt facilis enim architecto, consequuntur, doloremque numquam, voluptatem obcaecati hic! Fugit labore quidem est dolorum in nisi recusandae sed!
+</div>
+
+<div>
+    <span [ngStyle]="currentStyles"> This Element is styled by ngStyle object </span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto mollitia accusantium aliquam optio repellendus reprehenderit, voluptates voluptate omnis velit doloremque obcaecati molestias, iure quibusdam consequuntur blanditiis, ipsa dignissimos laboriosam. Facilis?
+</div>
+
+<button (click)="setCurrentStyle()">Add styles</button>
+<h1>Ng If Examples</h1>
+<div *ngIf="addStyle else elseBlock1">
+    Adding or removing an element with NgIf 
+</div>
+<ng-template #elseBlock1 >
+  <div class="elseblock">Else block is displayed </div>  
+</ng-template>
+<ng-template let-value="student" #template1>  
+    <p>This is our template. It will be displayed on the div {{value?.name}}  {{value?.dept}}*ngTemplateOutlet="myTemplateRef"</p>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="template1;context:{student:{name:'prakash',dept:'cse'}}" >
+  </ng-container>
+
+    <div *ngFor="let movie of moviesArr; trackBy:trackByMethod">
+      {{movie.id}} {{movie.title}}
+    </div>
+ 
+ <input type="button" value="Add Movies" (click)="addMovies()">
+<input type="button" value="ng-switch" name="" id="" (click)="routetoSwicth()">
+
+<button [routerLink]="['./ng-switch',{num:2}]">NG Switch</button>
+
+ <router-outlet></router-outlet>

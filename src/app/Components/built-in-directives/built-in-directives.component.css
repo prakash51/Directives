@@ -1,0 +1,35 @@
+
+div
+{
+    padding: 5px;
+}
+.content
+{
+    text-overflow: ellipsis;
+    color: #D61C4E;
+    background-color: #FFF38C;
+}
+.contentcard
+{
+    margin-bottom: 5px;
+}
+.content span
+{
+    color: #7DCE13;
+    font-weight: bold;
+}
+button
+{
+    display: block;
+}
+
+.addStyle
+{
+    padding: 2px;
+    background-color: rgb(199, 158, 166);
+    border-radius: 5px;
+}
+.elseblock
+{
+    font-weight: bolder;
+}
